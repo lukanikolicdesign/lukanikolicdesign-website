@@ -1,0 +1,553 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import { siteConfig } from '../../config/site';
+import casperSalesImage from '../../assets/images/casper-sales.jpg';
+import casperThumbnailImage from '../../assets/images/casper-thumbnail.jpg';
+import casperOldMattressesImage from '../../assets/images/casper-old-mattresses.jpg';
+import casperNewMattressesImage from '../../assets/images/casper-new-mattresses.jpg';
+import casperNewMattresses2Image from '../../assets/images/casper-new-mattresses2.jpg';
+import casperNewMattresses3Image from '../../assets/images/casper-new-mattresses3.jpg';
+import psOldProductImage from '../../assets/images/ps-old-product.jpg';
+import psNewProductImage from '../../assets/images/ps-new-product.jpg';
+
+const highlights = [
+	{ label: 'Client', value: 'Casper Canada' },
+	{ label: 'Completed', value: '2025' },
+	{ label: 'Role', value: 'Web Designer' },
+];
+
+const outcomes = [
+	'Reframed the mattress page as a clear conversion-focused landing experience for Canadian shoppers',
+	'Created a dedicated sales page optimized for promotional campaigns and time-sensitive offers',
+	'Improved product storytelling to better communicate comfort, support, and value',
+	'Streamlined the user journey from discovery to purchase intent with cleaner hierarchy and trust-building elements',
+	'Built a more premium, conversion-ready experience aligned with a modern mattress brand',
+];
+
+const futureSteps = [
+	'Expand the product page into a more complete category experience with better navigation, filtering, and size selection.',
+	'Build out a modular mattress comparison flow so shoppers can evaluate comfort, support, and price more easily.',
+	'Create more campaign-specific sales templates for seasonal promos, bundles, and limited-time offers.',
+	'Add personalized recommendations and quiz-driven product discovery to guide customers toward the right mattress.',
+	'Continue optimizing the page with conversion tracking and testing to improve performance over time.',
+];
+
+const caseStudyUrl = new URL('/work/casper', siteConfig.siteUrl).toString();
+const caseStudySchema = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Home',
+				item: siteConfig.siteUrl,
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Work',
+				item: new URL('/work', siteConfig.siteUrl).toString(),
+			},
+			{
+				'@type': 'ListItem',
+				position: 3,
+				name: 'Casper Case Study',
+				item: caseStudyUrl,
+			},
+		],
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'CreativeWork',
+		name: 'Casper Case Study',
+		headline: 'Canadian mattress landing page and promotional sales page redesign',
+		description:
+			'A Canadian mattress brand redesign focused on turning the mattresses page into a high-converting landing experience and a promo-driven sales page for seasonal campaigns.',
+		url: caseStudyUrl,
+		author: {
+			'@type': 'Person',
+			name: siteConfig.authorName,
+		},
+		isPartOf: {
+			'@type': 'WebSite',
+			name: siteConfig.name,
+			url: siteConfig.siteUrl,
+		},
+		inLanguage: siteConfig.locale,
+	},
+];
+---
+
+<Layout
+	title="Casper Case Study | Mattress Landing Page & Promo Sales Page Redesign"
+	description="Casper Canada mattress page redesign focused on turning the mattresses landing page into a high-converting experience and creating a promo sales page for campaigns."
+	ogType="article"
+	ogImageAlt="Preview of the Casper mattress landing page redesign"
+	schema={caseStudySchema}
+>
+	<a class="skip-link" href="#main-content">Skip to content</a>
+
+	<div class="case-page">
+		<SiteHeader />
+
+		<main id="main-content">
+			<section class="case-hero">
+				<p class="eyebrow">
+					<a class="breadcrumb-link" href="/work">Case Study</a>
+					<span class="breadcrumb-separator" aria-hidden="true">/</span>
+					<span>Casper</span>
+				</p>
+				<h1 class="display-title">A mattress brand with a fresh start and a 75% increase in revenue year on year</h1>
+				<div class="hero-subgrid">
+					<p class="hero-text">
+						Casper split its Canadian and U.S. operations into two separate entities, which meant the Canadian website needed a redesign to better serve its local audience. I redesigned the mattresses page to function as a high-converting landing page and created a dedicated sales page optimized for seasonal campaigns and promotional offers.
+					</p>
+				</div>
+			</section>
+
+			<section class="meta-strip" id="overview">
+				{highlights.map((item) => (
+					<div class="meta-item">
+						<p class="meta-label">{item.label}</p>
+						<p class="meta-value">{item.value}</p>
+					</div>
+				))}
+			</section>
+
+			<section class="lead-image-section">
+				<Image
+					class="lead-image"
+					src={casperThumbnailImage}
+					alt="Casper Canada mattress landing page preview"
+					sizes="(max-width: 78rem) 100vw, 78rem"
+				/>
+			</section>
+
+			<section class="summary-section">
+				<p class="section-kicker">Overview</p>
+				<h2>A mattress landing page designed for conversion and campaign performance.</h2>
+				<div class="summary-main">
+					<p>
+						The mattress category page needed to do more than showcase products. It had to work as a landing page that introduced the brand, educated shoppers, and led them toward a purchase decision with clarity and confidence.
+					</p>
+					<p>
+						I redesigned the page to serve as a high-converting product hub and built a dedicated sales page optimized for promos, seasonal offers, and targeted campaigns that drove urgency and action.
+					</p>
+					<p class="summary-meta">
+						<strong>Focus:</strong> Product storytelling, landing-page conversion, promo campaign UX
+					</p>
+					<p class="summary-meta">
+						<strong>Scope:</strong> UX strategy, landing page design, sales page design
+					</p>
+				</div>
+			</section>
+
+			<section class="editorial-section editorial-section-no-divider" id="process">
+				<div class="section-rail">
+					<p class="section-kicker">What I Did</p>
+				</div>
+				<div class="story-block">
+					<p>
+						I redesigned the mattresses page to function as a true landing page, giving the product category a clearer narrative around comfort, support, and value. The page needed to help Canadian shoppers understand the product quickly and move confidently toward purchase.
+					</p>
+					<p>
+						I also created a dedicated sales page built specifically for promotional campaigns, with stronger urgency messaging, cleaner offer hierarchy, and a more conversion-focused layout for discounts, bundles, and seasonal deals.
+					</p>
+					<p>
+						The work focused on simplifying the journey, increasing trust, and making the offer feel compelling without overwhelming the user. The result was a cleaner path from curiosity to conversion.
+					</p>
+				</div>
+			</section>
+
+			<section class="supporting-image-section">
+				<Image
+					class="supporting-image"
+					src={casperSalesImage}
+					alt="Casper Canada sales page promotional landing page"
+					loading="lazy"
+					decoding="async"
+					widths={[720, 1080, 1440]}
+					sizes="(max-width: 78rem) 100vw, 78rem"
+				/>
+			</section>
+
+			<section class="editorial-section">
+				<div class="section-rail">
+					<p class="section-kicker">Design Decisions</p>
+				</div>
+				<div class="story-block">
+					<p>
+						The key decision was to make the mattresses page feel more like a premium conversion landing page than a generic product listing. The layout prioritized clear product storytelling, trust signals, and purchase-focused CTA placement.
+					</p>
+					<p>
+						I also designed the sales page to be highly campaign-ready, using strong promo headers, benefit-driven sections, and a frictionless path to checkout or lead capture for time-sensitive offers.
+					</p>
+					<p>
+						The visual direction kept the brand approachable and modern while elevating perceived value. Clean hierarchy, high-contrast product imagery, and clear benefit messaging all helped the experience feel more premium and persuasive.
+					</p>
+				</div>
+			</section>
+
+			<section class="editorial-section" id="outcome">
+				<div class="section-rail">
+					<p class="section-kicker">Outcome</p>
+				</div>
+				<div class="story-block">
+					<ul class="outcome-list">
+						{outcomes.map((item) => <li>{item}</li>)}
+					</ul>
+				</div>
+			</section>
+
+			<section class="dual-image-section">
+				<div class="dual-image-container">
+					<div class="image-with-label">
+						<Image
+							class="lead-image"
+							src={casperOldMattressesImage}
+							alt="Casper old mattress page before redesign"
+							sizes="(max-width: 78rem) 50vw, 39rem"
+						/>
+						<p class="image-label">Old product page</p>
+					</div>
+					<div class="image-with-label">
+						<Image
+							class="supporting-image"
+							src={casperNewMattressesImage}
+							alt="Casper new mattress page after redesign"
+							loading="lazy"
+							decoding="async"
+							widths={[720, 1080, 1440]}
+							sizes="(max-width: 78rem) 50vw, 39rem"
+						/>
+						<p class="image-label">New product page</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="supporting-image-section">
+				<div class="image-grid-three">
+					<div class="image-with-label">
+						<Image
+							class="supporting-image"
+							src={casperNewMattresses2Image}
+							alt="Casper mattress page concept variation two"
+							loading="lazy"
+							decoding="async"
+							widths={[720, 1080, 1440]}
+							sizes="(max-width: 78rem) 33vw, 26rem"
+						/>
+						<p class="image-label">Listed mattresses on product page</p>
+					</div>
+					<div class="image-with-label">
+						<Image
+							class="supporting-image"
+							src={casperNewMattresses3Image}
+							alt="Casper mattress page concept variation three"
+							loading="lazy"
+							decoding="async"
+							widths={[720, 1080, 1440]}
+							sizes="(max-width: 78rem) 33vw, 26rem"
+						/>
+						<p class="image-label">Additional shopping options on product page</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="editorial-section future-steps-section">
+				<div class="section-rail">
+					<p class="section-kicker">Future Steps</p>
+				</div>
+				<div class="story-block">
+					<ul class="outcome-list">
+						{futureSteps.map((item) => <li>{item}</li>)}
+					</ul>
+				</div>
+			</section>
+		</main>
+	</div>
+</Layout>
+
+<style>
+	.case-page {
+		position: relative;
+		width: min(calc(100% - 3rem), 78rem);
+		margin: 0 auto;
+		padding: 1.25rem 0 5rem;
+	}
+
+	.eyebrow,
+	.meta-label,
+	.section-kicker {
+		font-family: var(--font-mono);
+		font-size: 0.82rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		line-height: 1.4;
+		text-transform: uppercase;
+	}
+
+	.eyebrow a {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.1rem 0;
+		color: var(--foreground);
+		text-decoration: none;
+		transition: opacity 120ms ease;
+	}
+
+	.eyebrow a:hover,
+	.eyebrow a:focus-visible {
+		opacity: 0.68;
+	}
+
+	.case-hero {
+		padding: 6rem 0 4rem;
+	}
+
+	.eyebrow,
+	.meta-label,
+	.section-kicker {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 0.55rem;
+		margin-bottom: 1.1rem;
+		color: var(--muted-foreground);
+		font-style: normal;
+	}
+
+	.breadcrumb-link {
+		font-weight: 600;
+	}
+
+	.breadcrumb-separator {
+		color: var(--muted-foreground);
+	}
+
+	h1,
+	h2 {
+		margin: 0;
+		font-weight: 800;
+		letter-spacing: -0.05em;
+		color: var(--foreground);
+	}
+
+	.hero-subgrid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+		gap: 2rem;
+		margin-top: 1.75rem;
+	}
+
+	.hero-text,
+	.hero-note,
+	.summary-main p,
+	.summary-meta,
+	.story-block p,
+	.outcome-list li {
+		font-size: 1.08rem;
+		line-height: 1.7;
+	}
+
+	.hero-text,
+	.hero-note,
+	.summary-main p,
+	.summary-meta,
+	.story-block p {
+		margin: 0;
+	}
+
+	.hero-note {
+		color: var(--muted-foreground);
+	}
+
+	.meta-strip {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 2rem;
+		padding: 1.5rem 0 0.5rem;
+		border-top: 1px solid var(--border);
+	}
+
+	.meta-item {
+		padding-top: 0.75rem;
+	}
+
+	.meta-value {
+		margin: 0.35rem 0 0;
+		font-size: 1.15rem;
+		font-weight: 700;
+	}
+
+	.lead-image-section {
+		padding: 2rem 0 4rem;
+	}
+
+	.dual-image-section {
+		padding: 2rem 0 4rem;
+	}
+
+	.dual-image-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+	}
+
+	.image-grid-three {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.5rem;
+	}
+
+	.image-with-label {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.image-label {
+		margin: 0;
+		font-size: 1rem;
+		font-weight: 600;
+		color: var(--foreground);
+		text-align: center;
+	}
+
+	.lead-image {
+		width: 100%;
+		border: 1px solid var(--border);
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-large);
+	}
+
+	.supporting-image-section {
+		padding: 2rem 0 4rem;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.supporting-image {
+		width: 100%;
+		border: 1px solid var(--border);
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-large);
+	}
+
+	.summary-section {
+		padding: 0 0 3rem;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.summary-section h2 {
+		margin-top: 0.75rem;
+		font-size: clamp(2rem, 3vw, 3rem);
+		line-height: 1.04;
+	}
+
+	.summary-main {
+		display: grid;
+		gap: 1rem;
+		margin-top: 1.5rem;
+	}
+
+	.summary-side p {
+		color: var(--muted-foreground);
+	}
+
+	.summary-side strong {
+		color: var(--foreground);
+	}
+
+	.summary-meta {
+		color: var(--muted-foreground);
+	}
+
+	.summary-meta strong {
+		color: var(--foreground);
+	}
+
+	.editorial-section {
+		display: grid;
+		grid-template-columns: 16rem minmax(0, 1fr);
+		gap: 2rem;
+		padding: 2.5rem 0;
+		border-bottom: 1px solid var(--border);
+	}
+
+	#outcome {
+		border-bottom: 0;
+	}
+
+	.future-steps-section {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.editorial-section-no-divider {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.section-rail {
+		align-self: start;
+	}
+
+	.story-block {
+		display: grid;
+		gap: 1rem;
+		max-width: 52rem;
+		margin-top: 0;
+	}
+
+	.outcome-list {
+		margin: 0;
+		padding-left: 1.25rem;
+		list-style: disc;
+	}
+
+	.outcome-list li::marker {
+		color: var(--foreground);
+	}
+
+
+	@media (max-width: 980px) {
+		.hero-subgrid,
+		.meta-strip {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 720px) {
+		.case-page {
+			width: min(calc(100% - 1.5rem), 78rem);
+			padding-top: 1rem;
+		}
+
+		.editorial-section {
+			grid-template-columns: 1fr;
+		}
+
+		.image-grid-three,
+		.dual-image-container {
+			grid-template-columns: 1fr;
+		}
+
+		.case-hero {
+			padding: 4rem 0 3rem;
+		}
+
+		.hero-text,
+		.hero-note,
+		.summary-main p,
+		.summary-meta,
+		.story-block p,
+		.outcome-list li {
+			font-size: 1.05rem;
+		}
+	}
+</style>

@@ -1,0 +1,308 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import figmaLogo from '../assets/logos/figma.svg';
+import framerLogo from '../assets/logos/framer.svg';
+import shopifyLogo from '../assets/logos/shopify.svg';
+import webflowLogo from '../assets/logos/webflow.svg';
+
+const tools = [
+	{ name: 'Figma', logo: figmaLogo, tone: 'light' },
+	{ name: 'Framer', logo: framerLogo, tone: 'dark' },
+	{ name: 'Shopify', logo: shopifyLogo, tone: 'light' },
+	{ name: 'Webflow', logo: webflowLogo, tone: 'light' },
+];
+---
+
+<Layout
+	title="Resume | Luka Nikolic Design"
+	description="Resume of Luka Nikolic, a web designer specializing in e-commerce, websites, dashboards, workflows, and design systems."
+>
+	<a class="skip-link" href="#main-content">Skip to content</a>
+
+	<div class="page">
+		<SiteHeader />
+
+		<main id="main-content">
+			<section class="hero">
+				<p class="eyebrow">Resume</p>
+				<h1 class="display-title">7+ years of web design in various industries</h1>
+				<div class="hero-subgrid">
+					<p class="hero-text">
+						My work focuses on creating full user funnels and maximising conversions through design. I have experience creating dashboards, workflows, design systems, and websites for various industries. I have worked with clients from the US, Canada, the UK, and various parts of Europe.
+					</p>
+				</div>
+			</section>
+
+			<section class="editorial-section">
+				<div class="section-rail">
+					<p class="section-kicker">Snapshot</p>
+				</div>
+				<div class="story-block">
+					<p><strong>Location:</strong> Belgrade, Serbia</p>
+					<p><strong>Focus:</strong> UX Design / Product Design / Web Design</p>
+					<p><strong>Specialties:</strong> Dashboards, workflows, design systems, websites</p>
+					<p><strong>Contact:</strong> <a href="mailto:lukanikolicdesign@gmail.com">lukanikolicdesign@gmail.com</a></p>
+				</div>
+			</section>
+
+			<section class="editorial-section">
+				<div class="section-rail">
+					<p class="section-kicker">Experience</p>
+				</div>
+				<div class="story-block">
+					<p>
+						<strong>Lead Web Designer</strong><br />
+						Diligent.biz, Mar 2021 - Present
+					</p>
+					<ul class="experience-list">
+						<li>Created a design system for in-house applications that forced our AI tools to create consistent layouts, dashboards and to keep consistency when we build new features.</li>
+						<li>Redesigned the cart on a motorcycle company website and increased checkout starts by <strong>61%</strong> and conversion rate by <strong>36% in the first month.</strong></li>
+						<li>Redesigned a product page for a jewelry store, increasing <strong>time spent on the page by 56% and conversions by 46%.</strong></li>
+						<li>Created dedicated landing pages for a PCB company that pre-qualified users and <strong>lifted lead volume by 42% in the first month.</strong></li>
+						<li>Redesigned a lead-generation funnel for a UK-based brokerage, resulting in a <strong>640%</strong> increase in qualified leads and a <strong>13.5%</strong> increase in conversions.</li>
+						<li>Redesigned a website for a US-based mattress brand that generated a <strong>32% increase in conversions</strong> in the first month.</li>
+											</ul>
+					<p>
+						<strong>Web Designer</strong><br />
+						Diligent.biz, Mar 2020 - Mar 2021
+					</p>
+									<ul class="experience-list">
+										<li>Redesigned landing pages for all products and sales campaigns for a mattress brand, resulting in a <strong>16%</strong> increase in average order value.</li>
+										<li>Gave UX guidance to a US-based jewelry client, providing a navigation restructure, landing-page template, email marketing flow, Hotjar surveys, and session tracking. This resulted in a <strong>125%</strong> increase in unique product-page views and recurring-buyer funnel activity.</li>
+										<li>Designed and built an affiliate website for mattress reviews with custom tools for filtering and sorting ratings that generates revenue for our in-house projects.</li>
+									</ul>
+
+										<p>
+						<strong>Graphic Designer</strong><br />
+						Diligent.biz, Aug 2019 - Mar 2020
+					</p>
+										<p>
+						<strong>Web Designer</strong><br />
+						Freelance, Aug 2019 - Present
+					</p>
+										<ul class="experience-list">
+											<li>Designed and built an informational website for a Serbian skincare brand that generated <strong>200.000</strong> impressions and <strong>24.000</strong> clicks in the first 6 months, increasing their in-store revenue.</li>
+											<li>Designed, built, and photographed all products for a Serbian haberdashery brand's e-commerce website, establishing its online presence and increasing revenue.</li>
+											<li>Interned in a web design agency where I designed and built landing pages for the most famous hotel chains in Montenegro, increasing their online bookings and revenue.</li>
+										</ul>
+				</div>
+			</section>
+
+			<section class="editorial-section" id="clients">
+				<div class="section-rail">
+					<p class="section-kicker">Websites</p>
+				</div>
+				<div class="story-block">
+					<p>
+						Some of the websites I have worked on:
+					</p>
+					<ul class="experience-list">
+						<li><strong>MV Augusta</strong> — Italian motorcycle manufacturer - <a href="https://www.mvagusta.com/" target="_blank" rel="noopener noreferrer"> View Website</a></li>
+						<li><strong>Prime Style</strong> — US jewelry store - <a href="https://primestyle.com/" target="_blank" rel="noopener noreferrer"> View Website</a></li>
+						<li><strong>Wonderskin</strong> — UK Beauty brand - <a href="https://eu.wonderskin.com/" target="_blank" rel="noopener noreferrer"> View Website</a></li>
+						<li><strong>Jean Patrique</strong> — UK Cooking brand - <a href="https://www.jeanpatrique.com/" target="_blank" rel="noopener noreferrer"> View Website</a></li>
+						<li><strong>Hackstons</strong> — UK brokerage firm - <a href="https://hackstons.com/" target="_blank" rel="noopener noreferrer"> View Website</a></li>
+						<li><strong>ZIP Moving</strong> — US Moving company - <a href="https://www.zipmoving.us/" target="_blank" rel="noopener noreferrer"> View Website</a></li>
+						<li><strong>Citizen Shipper</strong> — US Pet Services - <a href="https://citizenshipper.com/" target="_blank" rel="noopener noreferrer"> View Website</a></li>
+						<li><strong>Cosy House</strong> — US Bedding brand - <a href="https://www.cosyhousecollection.com/" target="_blank" rel="noopener noreferrer"> View Website</a></li>
+						<li><strong>Alex Shunnarah</strong> — US Attorney at Law - <a href="https://shunnarah.com/" target="_blank" rel="noopener noreferrer"> View Website</a></li>
+						<li><strong>Cut & Clarity</strong> — US Jewelry brand - <a href="https://cutandclarity.co/" target="_blank" rel="noopener noreferrer"> View Website</a></li>
+						<li><strong>Rush PCB</strong> — US PCB manufacturer - <a href="https://rushpcb.com/" target="_blank" rel="noopener noreferrer"> View Website</a></li>
+						<li><strong>Anatomy of Sleep</strong> — Affiliate Marketing - <a href="https://anatomyofsleep.com/" target="_blank" rel="noopener noreferrer"> View Website</a></li>
+						<li><strong>Hire Abroad</strong> — EU Hiring Platform - <a href="https://hireabroad.com/" target="_blank" rel="noopener noreferrer"> View Website</a></li>
+						<li><strong>Saljic Melemi</strong> — Serbian Beauty brand - <a href="https://saljic.com/" target="_blank" rel="noopener noreferrer"> View Website</a></li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="editorial-section">
+				<div class="section-rail">
+					<p class="section-kicker">Tools</p>
+				</div>
+				<div class="tools-grid">
+					{
+						tools.map((tool) => (
+							<div class="tool-card">
+								<div class:list={['tool-mark', tool.tone === 'dark' && 'tool-mark-dark']} aria-hidden="true">
+									<Image class="tool-logo" src={tool.logo} alt="" loading="lazy" />
+								</div>
+								<p class="tool-name">{tool.name}</p>
+							</div>
+						))
+					}
+				</div>
+			</section>
+		</main>
+	</div>
+</Layout>
+
+<style>
+	.page {
+		position: relative;
+		width: min(calc(100% - 3rem), 78rem);
+		margin: 0 auto;
+		padding: 1.25rem 0 5rem;
+	}
+
+	.eyebrow,
+	.section-kicker {
+		font-family: var(--font-mono);
+		font-size: 0.82rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		line-height: 1.4;
+		text-transform: uppercase;
+	}
+
+	.hero {
+		padding: 6rem 0 4rem;
+	}
+
+	.eyebrow,
+	.section-kicker {
+		margin: 0;
+		color: var(--muted-foreground);
+		font-style: normal;
+	}
+
+	.hero-subgrid {
+		display: grid;
+		grid-template-columns: 1fr;
+		margin-top: 1.75rem;
+	}
+
+	.hero-text,
+	.story-block p {
+		font-size: 1.08rem;
+		line-height: 1.7;
+		margin: 0;
+	}
+
+	.editorial-section {
+		display: grid;
+		grid-template-columns: 16rem minmax(0, 1fr);
+		gap: 2rem;
+		padding: 2.5rem 0;
+		border-top: 1px solid var(--border);
+	}
+
+	.section-rail {
+		align-self: start;
+	}
+
+	.story-block {
+		display: grid;
+		gap: 1rem;
+		max-width: 52rem;
+	}
+
+	.story-block strong {
+		color: var(--foreground);
+	}
+
+	.tools-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
+		max-width: 44rem;
+	}
+
+	.tool-card {
+		display: flex;
+		align-items: center;
+		gap: 0.9rem;
+		padding: 1rem 1.05rem;
+		border: 1px solid var(--border);
+		border-radius: 1.15rem;
+		background: var(--card);
+	}
+
+	.tool-mark {
+		width: 3rem;
+		height: 3rem;
+		flex: 0 0 3rem;
+		display: grid;
+		place-items: center;
+		border-radius: 0.9rem;
+		background: linear-gradient(
+			180deg,
+			color-mix(in srgb, var(--muted) 90%, var(--card) 10%) 0%,
+			color-mix(in srgb, var(--border) 55%, var(--card) 45%) 100%
+		);
+		border: 1px solid color-mix(in srgb, var(--border) 88%, var(--background) 12%);
+		font-size: 0.95rem;
+		font-weight: 800;
+		letter-spacing: -0.04em;
+		color: var(--foreground);
+	}
+
+	.tool-mark-dark {
+		background: #111111;
+		border-color: #111111;
+	}
+
+	.tool-logo {
+		width: 1.55rem;
+		height: 1.55rem;
+		display: block;
+		object-fit: contain;
+	}
+
+	.tool-name {
+		margin: 0;
+		font-size: 1rem;
+		font-weight: 600;
+		letter-spacing: -0.02em;
+	}
+
+	.experience-list {
+		margin: 0 0 1rem 1.4rem;
+		padding: 0;
+		list-style: disc inside;
+	}
+
+	.experience-list li {
+		margin-bottom: 0.75rem;
+	}
+
+	.experience-list a {
+		color: var(--primary);
+		text-decoration: underline;
+	}
+
+	.experience-list a:hover {
+		color: var(--primary);
+	}
+
+	@media (max-width: 980px) {
+		.hero-subgrid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 720px) {
+		.page {
+			width: min(calc(100% - 1.5rem), 78rem);
+			padding-top: 1rem;
+		}
+
+		.hero {
+			padding: 4rem 0 3rem;
+		}
+
+		.editorial-section {
+			grid-template-columns: 1fr;
+		}
+
+		.hero-text,
+		.story-block p {
+			font-size: 1.05rem;
+		}
+
+		.tools-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

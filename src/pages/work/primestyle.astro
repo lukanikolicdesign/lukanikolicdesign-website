@@ -1,0 +1,548 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import { siteConfig } from '../../config/site';
+import primestyleThumbnailImage from '../../assets/images/primestyle-thumbnail.jpg';
+import primestyleRingsImage from '../../assets/images/primestyle-rings.jpg';
+import oldProductCategoriesImage from '../../assets/images/old-product-catogories.jpg';
+import newProductCategoriesImage from '../../assets/images/new-product-categories.jpg';
+import psOldProductImage from '../../assets/images/ps-old-product.jpg';
+import psNewProductImage from '../../assets/images/ps-new-product.jpg';
+
+const highlights = [
+	{ label: 'Client', value: 'PrimeStyle' },
+	{ label: 'Completed', value: '2023' },
+	{ label: 'Role', value: 'Web Designer' },
+];
+
+const outcomes = [
+	'46% increase in conversion rate through streamlined checkout flow',
+	'Improved product discovery with enhanced filtering and search',
+	'Better customer confidence with detailed product information and reviews',
+	'Mobile-optimized experience resulting in increased mobile conversions',
+	'Cohesive brand experience across all touchpoints',
+];
+
+const futureSteps = [
+	'Expand the product experience with richer category pages, gifting collections, and seasonal promotions.',
+	'Build a more detailed product comparison flow to help customers evaluate materials, sizing, and finishing options.',
+	'Add personalized recommendations and saved wishlists for higher engagement and repeat purchases.',
+	'Create campaign-ready landing templates for launches, editorial drops, and limited-run collections.',
+	'Continue optimizing checkout and product-page performance with testing and analytics-driven improvements.',
+];
+
+const caseStudyUrl = new URL('/work/primestyle', siteConfig.siteUrl).toString();
+const caseStudySchema = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Home',
+				item: siteConfig.siteUrl,
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Work',
+				item: new URL('/work', siteConfig.siteUrl).toString(),
+			},
+			{
+				'@type': 'ListItem',
+				position: 3,
+				name: 'PrimeStyle Case Study',
+				item: caseStudyUrl,
+			},
+		],
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'CreativeWork',
+		name: 'PrimeStyle Case Study',
+		headline: 'Jewelry e-commerce store with 46% conversion rate increase',
+		description:
+			'A luxury jewelry e-commerce redesign focused on improving product discovery and checkout experience.',
+		url: caseStudyUrl,
+		author: {
+			'@type': 'Person',
+			name: siteConfig.authorName,
+		},
+		isPartOf: {
+			'@type': 'WebSite',
+			name: siteConfig.name,
+			url: siteConfig.siteUrl,
+		},
+		inLanguage: siteConfig.locale,
+	},
+];
+---
+
+<Layout
+	title="PrimeStyle Case Study | Jewelry E-Commerce Redesign"
+	description="PrimeStyle jewelry e-commerce case study showcasing a 46% conversion rate increase through thoughtful UX design."
+	ogType="article"
+	ogImageAlt="Preview of the PrimeStyle e-commerce redesign"
+	schema={caseStudySchema}
+>
+	<a class="skip-link" href="#main-content">Skip to content</a>
+
+	<div class="case-page">
+		<SiteHeader />
+
+		<main id="main-content">
+			<section class="case-hero">
+				<p class="eyebrow">
+					<a class="breadcrumb-link" href="/work">Case Study</a>
+					<span class="breadcrumb-separator" aria-hidden="true">/</span>
+					<span>PrimeStyle</span>
+				</p>
+				<h1 class="display-title">Luxury Jewelry E-Commerce Founded in 1999. In Need Of A Redesign</h1>
+				<div class="hero-subgrid">
+					<p class="hero-text">
+						PrimeStyle is a luxury jewelry retailer looking to enhance their online presence and improve customer purchasing behavior. Through strategic UX improvements, we achieved a 46% increase in conversion rate.
+					</p>
+				</div>
+			</section>
+
+			<section class="meta-strip" id="overview">
+				{highlights.map((item) => (
+					<div class="meta-item">
+						<p class="meta-label">{item.label}</p>
+						<p class="meta-value">{item.value}</p>
+					</div>
+				))}
+			</section>
+
+			<section class="lead-image-section">
+				<Image
+					class="lead-image"
+					src={primestyleThumbnailImage}
+					alt="PrimeStyle e-commerce platform preview"
+					sizes="(max-width: 78rem) 100vw, 78rem"
+				/>
+			</section>
+
+			<section class="summary-section">
+				<p class="section-kicker">Overview</p>
+				<h2>Elegant e-commerce experience for luxury jewelry.</h2>
+				<div class="summary-main">
+					<p>
+						The original PrimeStyle e-commerce platform had a cluttered interface that made it difficult for customers to find and evaluate jewelry products. The checkout process was lengthy and confusing, leading to high cart abandonment rates.
+					</p>
+					<p>
+						My role was to redesign the entire customer journey from product discovery to checkout, focusing on simplicity, elegance, and trust.
+					</p>
+					<p class="summary-meta">
+						<strong>Focus:</strong> Conversion optimization, product discovery, trust building
+					</p>
+					<p class="summary-meta">
+						<strong>Scope:</strong> UX research, UI redesign, checkout flow optimization
+					</p>
+				</div>
+			</section>
+
+			<section class="editorial-section editorial-section-no-divider" id="process">
+				<div class="section-rail">
+					<p class="section-kicker">What I Did</p>
+				</div>
+				<div class="story-block">
+					<p>
+						I started by conducting user research and analyzing the existing platform. Key findings included navigation confusion, poor product filtering, and a complicated multi-step checkout process.
+					</p>
+					<p>
+						The redesign focused on creating an intuitive product browsing experience with advanced filtering options, high-quality product imagery, and detailed product information including customer reviews and specifications.
+					</p>
+					<p>
+						The checkout flow was simplified from 7 steps to 3 steps, with clear progress indication and trust signals like security badges and money-back guarantees. We also implemented guest checkout options and saved addresses for returning customers.
+					</p>
+				</div>
+			</section>
+
+			<section class="supporting-image-section">
+				<Image
+					class="supporting-image"
+					src={primestyleRingsImage}
+					alt="PrimeStyle product photography and jewelry rings detail"
+					loading="lazy"
+					decoding="async"
+					widths={[720, 1080, 1440]}
+					sizes="(max-width: 78rem) 100vw, 78rem"
+				/>
+			</section>
+
+			<section class="editorial-section">
+				<div class="section-rail">
+					<p class="section-kicker">Design Decisions</p>
+				</div>
+				<div class="story-block">
+					<p>
+						For a luxury brand, the design needed to convey elegance and trustworthiness. We chose a clean, minimalist aesthetic with ample whitespace, premium typography, and high-quality imagery.
+					</p>
+					<p>
+						Product discovery was enhanced with intelligent filtering by price range, metal type, gemstone, and occasion. The ability to compare products side-by-side was added to help customers make informed decisions.
+					</p>
+					<p>
+						Trust was built through customer testimonials, product certifications, and a hassle-free return policy prominently displayed throughout the site.
+					</p>
+				</div>
+			</section>
+
+			<section class="editorial-section" id="outcome">
+				<div class="section-rail">
+					<p class="section-kicker">Outcome</p>
+				</div>
+				<div class="story-block">
+					<ul class="outcome-list">
+						{outcomes.map((item) => <li>{item}</li>)}
+					</ul>
+				</div>
+			</section>
+
+			<section class="dual-image-section">
+				<div class="dual-image-container">
+					<div class="image-with-label">
+						<Image
+							class="lead-image"
+							src={psOldProductImage}
+							alt="PrimeStyle old product page"
+							sizes="(max-width: 78rem) 50vw, 39rem"
+						/>
+						<p class="image-label">Old product page</p>
+					</div>
+					<div class="image-with-label">
+						<Image
+							class="supporting-image"
+							src={psNewProductImage}
+							alt="PrimeStyle new product page"
+							loading="lazy"
+							decoding="async"
+							widths={[720, 1080, 1440]}
+							sizes="(max-width: 78rem) 50vw, 39rem"
+						/>
+						<p class="image-label">New product page</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="supporting-image-section">
+				<div class="image-grid-two">
+					<div class="image-with-label">
+						<Image
+							class="supporting-image"
+							src={oldProductCategoriesImage}
+							alt="PrimeStyle old product categories"
+							loading="lazy"
+							decoding="async"
+							widths={[720, 1080, 1440]}
+							sizes="(max-width: 78rem) 50vw, 39rem"
+						/>
+						<p class="image-label">Old product categories</p>
+					</div>
+					<div class="image-with-label">
+						<Image
+							class="supporting-image"
+							src={newProductCategoriesImage}
+							alt="PrimeStyle new product categories"
+							loading="lazy"
+							decoding="async"
+							widths={[720, 1080, 1440]}
+							sizes="(max-width: 78rem) 50vw, 39rem"
+						/>
+						<p class="image-label">New product categories</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="editorial-section future-steps-section">
+				<div class="section-rail">
+					<p class="section-kicker">Future Steps</p>
+				</div>
+				<div class="story-block">
+					<ul class="outcome-list">
+						{futureSteps.map((item) => <li>{item}</li>)}
+					</ul>
+				</div>
+			</section>
+		</main>
+	</div>
+</Layout>
+
+<style>
+	.case-page {
+		position: relative;
+		width: min(calc(100% - 3rem), 78rem);
+		margin: 0 auto;
+		padding: 1.25rem 0 5rem;
+	}
+
+	.eyebrow,
+	.meta-label,
+	.section-kicker {
+		font-family: var(--font-mono);
+		font-size: 0.82rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		line-height: 1.4;
+		text-transform: uppercase;
+	}
+
+	.eyebrow a {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.1rem 0;
+		color: var(--foreground);
+		text-decoration: none;
+		transition: opacity 120ms ease;
+	}
+
+	.eyebrow a:hover,
+	.eyebrow a:focus-visible {
+		opacity: 0.68;
+	}
+
+	.case-hero {
+		padding: 6rem 0 4rem;
+	}
+
+	.eyebrow,
+	.meta-label,
+	.section-kicker {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 0.55rem;
+		margin-bottom: 1.1rem;
+		color: var(--muted-foreground);
+		font-style: normal;
+	}
+
+	.breadcrumb-link {
+		font-weight: 600;
+	}
+
+	.breadcrumb-separator {
+		color: var(--muted-foreground);
+	}
+
+	h1,
+	h2 {
+		margin: 0;
+		font-weight: 800;
+		letter-spacing: -0.05em;
+		color: var(--foreground);
+	}
+
+	.hero-subgrid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+		gap: 2rem;
+		margin-top: 1.75rem;
+	}
+
+	.hero-text,
+	.hero-note,
+	.summary-main p,
+	.summary-meta,
+	.story-block p,
+	.outcome-list li {
+		font-size: 1.08rem;
+		line-height: 1.7;
+	}
+
+	.hero-text,
+	.hero-note,
+	.summary-main p,
+	.summary-meta,
+	.story-block p {
+		margin: 0;
+	}
+
+	.hero-note {
+		color: var(--muted-foreground);
+	}
+
+	.meta-strip {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 2rem;
+		padding: 1.5rem 0 0.5rem;
+		border-top: 1px solid var(--border);
+	}
+
+	.meta-item {
+		padding-top: 0.75rem;
+	}
+
+	.meta-value {
+		margin: 0.35rem 0 0;
+		font-size: 1.15rem;
+		font-weight: 700;
+	}
+
+	.lead-image-section {
+		padding: 2rem 0 4rem;
+	}
+
+	.dual-image-section {
+		padding: 2rem 0 4rem;
+	}
+
+	.dual-image-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+	}
+
+	.image-grid-two {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.5rem;
+	}
+
+	.image-with-label {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.image-label {
+		margin: 0;
+		font-size: 1rem;
+		font-weight: 600;
+		color: var(--foreground);
+		text-align: center;
+	}
+
+	.lead-image {
+		width: 100%;
+		border: 1px solid var(--border);
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-large);
+	}
+
+	.supporting-image-section {
+		padding: 2rem 0 4rem;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.supporting-image {
+		width: 100%;
+		border: 1px solid var(--border);
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-large);
+	}
+
+	.summary-section {
+		padding: 0 0 3rem;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.summary-section h2 {
+		margin-top: 0.75rem;
+		font-size: clamp(2rem, 3vw, 3rem);
+		line-height: 1.04;
+	}
+
+	.summary-main {
+		display: grid;
+		gap: 1rem;
+		margin-top: 1.5rem;
+	}
+
+	.summary-side p {
+		color: var(--muted-foreground);
+	}
+
+	.summary-side strong {
+		color: var(--foreground);
+	}
+
+	.summary-meta {
+		color: var(--muted-foreground);
+	}
+
+	.summary-meta strong {
+		color: var(--foreground);
+	}
+
+	.editorial-section {
+		display: grid;
+		grid-template-columns: 16rem minmax(0, 1fr);
+		gap: 2rem;
+		padding: 2.5rem 0;
+		border-bottom: 1px solid var(--border);
+	}
+
+	#outcome {
+		border-bottom: 0;
+	}
+
+	.future-steps-section {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.editorial-section-no-divider {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.section-rail {
+		align-self: start;
+	}
+
+	.story-block {
+		display: grid;
+		gap: 1rem;
+		max-width: 52rem;
+		margin-top: 0;
+	}
+
+	.outcome-list {
+		margin: 0;
+		padding-left: 1.25rem;
+		list-style: disc;
+	}
+
+	.outcome-list li::marker {
+		color: var(--foreground);
+	}
+
+
+	@media (max-width: 980px) {
+		.hero-subgrid,
+		.meta-strip {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 720px) {
+		.case-page {
+			width: min(calc(100% - 1.5rem), 78rem);
+			padding-top: 1rem;
+		}
+
+		.editorial-section,
+		.image-grid-two,
+		.dual-image-container {
+			grid-template-columns: 1fr;
+		}
+
+		.case-hero {
+			padding: 4rem 0 3rem;
+		}
+
+		.hero-text,
+		.hero-note,
+		.summary-main p,
+		.summary-meta,
+		.story-block p,
+		.outcome-list li {
+			font-size: 1.05rem;
+		}
+	}
+</style>

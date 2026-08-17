@@ -1,0 +1,548 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import { siteConfig } from '../../config/site';
+import mvAugustaThumbnailImage from '../../assets/images/mv-augusta-thumbnail.jpg';
+import mvAugustaThumbnail2Image from '../../assets/images/mv-augusta-thumbnail2.jpg';
+import mvAugustaNew1Image from '../../assets/images/mv-augusta-new-1.jpg';
+import mvAugustaNew2Image from '../../assets/images/mv-augusta-new-2.jpg';
+import mvAugustaNew3Image from '../../assets/images/mv-augusta-new-3.jpg';
+import mvAugustaNew4Image from '../../assets/images/mv-augusta-new-4.jpg';
+
+const highlights = [
+	{ label: 'Client', value: 'MV Augusta' },
+	{ label: 'Completed', value: '2021' },
+	{ label: 'Role', value: 'Web Designer' },
+];
+
+const outcomes = [
+	'Created a website experience that introduced younger audiences to the MV Augusta brand through accessible products and a clearer digital journey',
+	'Focused the experience on driving sales of accessories, e-bikes, and scooters',
+	'Improved product discovery with stronger presentation and clearer paths to purchase',
+	'Built an early relationship with younger customers who may aspire to purchase a motorcycle in the future',
+	'Created a more modern and approachable entry point into the MV Augusta brand',
+];
+
+const futureSteps = [
+	'Expand the website with richer product storytelling for accessories, e-bikes, and scooters.',
+	'Create more campaign landing pages that introduce younger audiences to the brand and its product range.',
+	'Add stronger product comparison and recommendation tools to help shoppers choose the right entry product.',
+	'Build content that connects everyday accessories and urban mobility products to the wider motorcycle brand.',
+	'Continue optimizing the website and checkout journey with testing focused on accessory sales.',
+];
+
+const caseStudyUrl = new URL('/work/mv-augusta', siteConfig.siteUrl).toString();
+const caseStudySchema = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Home',
+				item: siteConfig.siteUrl,
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Work',
+				item: new URL('/work', siteConfig.siteUrl).toString(),
+			},
+			{
+				'@type': 'ListItem',
+				position: 3,
+				name: 'MV Augusta Case Study',
+				item: caseStudyUrl,
+			},
+		],
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'CreativeWork',
+		name: 'MV Augusta Case Study',
+		headline: 'Website experience helping a motorcycle brand connect with younger audiences',
+		description:
+			'MV Augusta website case study focused on reaching younger audiences and driving sales of accessories, e-bikes, and scooters as an entry point into the brand.',
+		url: caseStudyUrl,
+		author: {
+			'@type': 'Person',
+			name: siteConfig.authorName,
+		},
+		isPartOf: {
+			'@type': 'WebSite',
+			name: siteConfig.name,
+			url: siteConfig.siteUrl,
+		},
+		inLanguage: siteConfig.locale,
+	},
+];
+---
+
+<Layout
+	title="MV Augusta Case Study | Website and Accessories E-Commerce"
+	description="MV Augusta website case study focused on reaching younger audiences and driving sales of accessories, e-bikes, and scooters as an entry point into the motorcycle brand."
+	ogType="article"
+	ogImageAlt="Preview of the MV Augusta website"
+	schema={caseStudySchema}
+>
+	<a class="skip-link" href="#main-content">Skip to content</a>
+
+	<div class="case-page">
+		<SiteHeader />
+
+		<main id="main-content">
+			<section class="case-hero">
+				<p class="eyebrow">
+					<a class="breadcrumb-link" href="/work">Case Study</a>
+					<span class="breadcrumb-separator" aria-hidden="true">/</span>
+					<span>MV Augusta</span>
+				</p>
+				<h1 class="display-title">Introducing the MV Augusta Brand to a Younger Audience</h1>
+				<div class="hero-subgrid">
+					<p class="hero-text">
+						MV Augusta wanted to connect with a younger audience through its website by making accessories, e-bikes, and scooters an approachable entry point into the brand. The long-term goal was to build familiarity and loyalty early, so customers might aspire to purchase a motorcycle in the future.
+					</p>
+				</div>
+			</section>
+
+			<section class="meta-strip" id="overview">
+				{highlights.map((item) => (
+					<div class="meta-item">
+						<p class="meta-label">{item.label}</p>
+						<p class="meta-value">{item.value}</p>
+					</div>
+				))}
+			</section>
+
+			<section class="lead-image-section">
+				<Image
+					class="lead-image"
+					src={mvAugustaThumbnailImage}
+					alt="MV Augusta website preview"
+					sizes="(max-width: 78rem) 100vw, 78rem"
+				/>
+			</section>
+
+			<section class="summary-section">
+				<p class="section-kicker">Overview</p>
+				<h2>A website designed to make the MV Augusta brand more accessible.</h2>
+				<div class="summary-main">
+					<p>
+						The website needed to introduce MV Augusta to younger audiences who may not be ready to purchase a motorcycle yet. Accessories, e-bikes, and scooters offered a more accessible way to start building a relationship with the brand.
+					</p>
+					<p>
+						My role was to design a website that made these entry products easy to discover and purchase, while presenting the wider MV Augusta brand as something customers could grow into over time.
+					</p>
+					<p class="summary-meta">
+						<strong>Focus:</strong> Accessory sales, younger audiences, brand introduction
+					</p>
+					<p class="summary-meta">
+						<strong>Scope:</strong> Website design, product storytelling, e-commerce optimization
+					</p>
+				</div>
+			</section>
+
+			<section class="editorial-section editorial-section-no-divider" id="process">
+				<div class="section-rail">
+					<p class="section-kicker">What I Did</p>
+				</div>
+				<div class="story-block">
+					<p>
+						I researched how younger audiences discover lifestyle and mobility products online, and how the website could make MV Augusta feel relevant before they were ready to consider a full-size motorcycle.
+					</p>
+					<p>
+						I designed the website around strong visual storytelling and clear product presentation. Accessories, e-bikes, and scooters were given a more prominent role so visitors could find an accessible product that matched their lifestyle and budget.
+					</p>
+					<p>
+						The main focus was driving accessory sales through a clearer path from discovery to checkout. The experience also connected these products back to MV Augusta's heritage, helping younger customers build an early connection with the brand.
+					</p>
+				</div>
+			</section>
+
+			<section class="supporting-image-section">
+				<Image
+					class="supporting-image"
+					src={mvAugustaThumbnail2Image}
+					alt="MV Augusta website experience preview"
+					loading="lazy"
+					decoding="async"
+					widths={[720, 1080, 1440]}
+					sizes="(max-width: 78rem) 100vw, 78rem"
+				/>
+			</section>
+
+			<section class="editorial-section">
+				<div class="section-rail">
+					<p class="section-kicker">Design Decisions</p>
+				</div>
+				<div class="story-block">
+					<p>
+						The design captured the passion and heritage of MV Augusta while making the website feel approachable to people who were new to the brand. Bold typography, product-led imagery, and a confident visual direction kept the experience premium without making it feel exclusive.
+					</p>
+					<p>
+						Products were organized around accessible entry points and use cases, making it easier for visitors to find accessories, e-bikes, and scooters that fit their interests and daily lives.
+					</p>
+					<p>
+						The website positioned these products as the beginning of a longer relationship with MV Augusta. By creating a positive first purchase experience, the brand could stay relevant as customers' interest and ability to purchase a motorcycle developed.
+					</p>
+				</div>
+			</section>
+
+			<section class="editorial-section" id="outcome">
+				<div class="section-rail">
+					<p class="section-kicker">Outcome</p>
+				</div>
+				<div class="story-block">
+					<ul class="outcome-list">
+						{outcomes.map((item) => <li>{item}</li>)}
+					</ul>
+				</div>
+			</section>
+
+			<section class="dual-image-section">
+				<div class="dual-image-container">
+					<div class="image-with-label">
+						<Image
+							class="lead-image"
+							src={mvAugustaNew1Image}
+							alt="MV Augusta e-bike product page"
+							sizes="(max-width: 78rem) 50vw, 39rem"
+						/>
+						<p class="image-label">E-bike product page</p>
+					</div>
+					<div class="image-with-label">
+						<Image
+							class="supporting-image"
+							src={mvAugustaNew2Image}
+							alt="MV Augusta accessories presentation"
+							loading="lazy"
+							decoding="async"
+							widths={[720, 1080, 1440]}
+							sizes="(max-width: 78rem) 50vw, 39rem"
+						/>
+						<p class="image-label">Accessories presentation</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="supporting-image-section">
+				<div class="image-grid-two">
+					<div class="image-with-label">
+						<Image
+							class="supporting-image"
+							src={mvAugustaNew3Image}
+							alt="MV Augusta product page on mobile"
+							loading="lazy"
+							decoding="async"
+							widths={[720, 1080, 1440]}
+							sizes="(max-width: 78rem) 50vw, 39rem"
+						/>
+						<p class="image-label">Product on mobile</p>
+					</div>
+					<div class="image-with-label">
+						<Image
+							class="supporting-image"
+							src={mvAugustaNew4Image}
+							alt="MV Augusta checkout experience"
+							loading="lazy"
+							decoding="async"
+							widths={[720, 1080, 1440]}
+							sizes="(max-width: 78rem) 50vw, 39rem"
+						/>
+						<p class="image-label">Checkout</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="editorial-section future-steps-section">
+				<div class="section-rail">
+					<p class="section-kicker">Future Steps</p>
+				</div>
+				<div class="story-block">
+					<ul class="outcome-list">
+						{futureSteps.map((item) => <li>{item}</li>)}
+					</ul>
+				</div>
+			</section>
+		</main>
+	</div>
+</Layout>
+
+<style>
+	.case-page {
+		position: relative;
+		width: min(calc(100% - 3rem), 78rem);
+		margin: 0 auto;
+		padding: 1.25rem 0 5rem;
+	}
+
+	.eyebrow,
+	.meta-label,
+	.section-kicker {
+		font-family: var(--font-mono);
+		font-size: 0.82rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		line-height: 1.4;
+		text-transform: uppercase;
+	}
+
+	.eyebrow a {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.1rem 0;
+		color: var(--foreground);
+		text-decoration: none;
+		transition: opacity 120ms ease;
+	}
+
+	.eyebrow a:hover,
+	.eyebrow a:focus-visible {
+		opacity: 0.68;
+	}
+
+	.case-hero {
+		padding: 6rem 0 4rem;
+	}
+
+	.eyebrow,
+	.meta-label,
+	.section-kicker {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 0.55rem;
+		margin-bottom: 1.1rem;
+		color: var(--muted-foreground);
+		font-style: normal;
+	}
+
+	.breadcrumb-link {
+		font-weight: 600;
+	}
+
+	.breadcrumb-separator {
+		color: var(--muted-foreground);
+	}
+
+	h1,
+	h2 {
+		margin: 0;
+		font-weight: 800;
+		letter-spacing: -0.05em;
+		color: var(--foreground);
+	}
+
+	.hero-subgrid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+		gap: 2rem;
+		margin-top: 1.75rem;
+	}
+
+	.hero-text,
+	.hero-note,
+	.summary-main p,
+	.summary-meta,
+	.story-block p,
+	.outcome-list li {
+		font-size: 1.08rem;
+		line-height: 1.7;
+	}
+
+	.hero-text,
+	.hero-note,
+	.summary-main p,
+	.summary-meta,
+	.story-block p {
+		margin: 0;
+	}
+
+	.hero-note {
+		color: var(--muted-foreground);
+	}
+
+	.meta-strip {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 2rem;
+		padding: 1.5rem 0 0.5rem;
+		border-top: 1px solid var(--border);
+	}
+
+	.meta-item {
+		padding-top: 0.75rem;
+	}
+
+	.meta-value {
+		margin: 0.35rem 0 0;
+		font-size: 1.15rem;
+		font-weight: 700;
+	}
+
+	.lead-image-section {
+		padding: 2rem 0 4rem;
+	}
+
+	.dual-image-section {
+		padding: 2rem 0 4rem;
+	}
+
+	.dual-image-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+	}
+
+	.image-grid-two {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.5rem;
+	}
+
+	.image-with-label {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.image-label {
+		margin: 0;
+		font-size: 1rem;
+		font-weight: 600;
+		color: var(--foreground);
+		text-align: center;
+	}
+
+	.lead-image {
+		width: 100%;
+		border: 1px solid var(--border);
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-large);
+	}
+
+	.supporting-image-section {
+		padding: 2rem 0 4rem;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.supporting-image {
+		width: 100%;
+		border: 1px solid var(--border);
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-large);
+	}
+
+	.summary-section {
+		padding: 0 0 3rem;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.summary-section h2 {
+		margin-top: 0.75rem;
+		font-size: clamp(2rem, 3vw, 3rem);
+		line-height: 1.04;
+	}
+
+	.summary-main {
+		display: grid;
+		gap: 1rem;
+		margin-top: 1.5rem;
+	}
+
+	.summary-side p {
+		color: var(--muted-foreground);
+	}
+
+	.summary-side strong {
+		color: var(--foreground);
+	}
+
+	.summary-meta {
+		color: var(--muted-foreground);
+	}
+
+	.summary-meta strong {
+		color: var(--foreground);
+	}
+
+	.editorial-section {
+		display: grid;
+		grid-template-columns: 16rem minmax(0, 1fr);
+		gap: 2rem;
+		padding: 2.5rem 0;
+		border-bottom: 1px solid var(--border);
+	}
+
+	#outcome {
+		border-bottom: 0;
+	}
+
+	.future-steps-section {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.editorial-section-no-divider {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.section-rail {
+		align-self: start;
+	}
+
+	.story-block {
+		display: grid;
+		gap: 1rem;
+		max-width: 52rem;
+		margin-top: 0;
+	}
+
+	.outcome-list {
+		margin: 0;
+		padding-left: 1.25rem;
+		list-style: disc;
+	}
+
+	.outcome-list li::marker {
+		color: var(--foreground);
+	}
+
+
+	@media (max-width: 980px) {
+		.hero-subgrid,
+		.meta-strip {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 720px) {
+		.case-page {
+			width: min(calc(100% - 1.5rem), 78rem);
+			padding-top: 1rem;
+		}
+
+		.editorial-section,
+		.image-grid-two,
+		.dual-image-container {
+			grid-template-columns: 1fr;
+		}
+
+		.case-hero {
+			padding: 4rem 0 3rem;
+		}
+
+		.hero-text,
+		.hero-note,
+		.summary-main p,
+		.summary-meta,
+		.story-block p,
+		.outcome-list li {
+			font-size: 1.05rem;
+		}
+	}
+</style>

@@ -1,0 +1,27 @@
+{
+  "name": "luka-nikolic-portfolio",
+  "description": "Luka Nikolic Design web designer portfolio.",
+  "type": "module",
+  "version": "2.0.0",
+  "author": "Luka Nikolic",
+  "license": "MIT",
+  "keywords": ["portfolio", "web designer", "ux", "designer", "astro"],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^7.0.1",
+    "@astrojs/sitemap": "^3.7.3",
+    "@fontsource-variable/manrope": "^5.2.8",
+    "@tailwindcss/vite": "^4.3.2",
+    "astro": "^7.0.5",
+    "sharp": "^0.35.3",
+    "tailwindcss": "^4.3.2"
+  }
+}

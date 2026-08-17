@@ -1,0 +1,573 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import { siteConfig } from '../../config/site';
+import designSystemImage from '../../assets/images/Design System Hero.jpg';
+import reconSecondThumbnailImage from '../../assets/images/recon-second-thumbnail.jpg';
+import oldGoogleAdsDarkImage from '../../assets/images/old-google-ads-dark.jpg';
+import newGoogleAdsDarkImage from '../../assets/images/new-google-ads-dark.jpg';
+import oldGoogleAdsLightImage from '../../assets/images/old-google-ads-light.jpg';
+import newGoogleAdsLightImage from '../../assets/images/new-google-ads-light.jpg';
+import oldAnalyticsImage from '../../assets/images/old-analytics.jpg';
+import newAnalyticsImage from '../../assets/images/new analyics.jpg';
+import oldPagesImage from '../../assets/images/old-pages.jpg';
+import newPagesImage from '../../assets/images/new-pages.jpg';
+
+const highlights = [
+	{ label: 'Client', value: 'Recon' },
+	{ label: 'Completed', value: '2026' },
+	{ label: 'Role', value: 'Lead UI/UX Designer' },
+];
+
+const outcomes = [
+	'A unified, fleshed-out design system that can be applied across the product.',
+	'A dashboard that is easier to scan and understand, with a clear hierarchy and visual consistency.',
+	'A dark mode that is easier to read and more visually appealing than the original version.',
+	'Components and design tokens that can be used to generate new screens in Figma, allowing the AI to focus on content rather than design.',
+	'A library in Figma that makes it easy to change and update the design system as needed, without having to redo the entire product.',
+];
+
+const futureSteps = [
+	'Expand the design system into a broader component library for more product areas and workflows.',
+	'Create reusable templates for analytics dashboards, customer reports, and team admin experiences.',
+	'Add more interaction states and accessibility validation to support product-wide consistency.',
+	'Continue testing the system in real product flows to improve speed, usability, and adoption across teams.',
+	'Use the system as a foundation for future AI-assisted product work and faster implementation cycles.',
+];
+
+const caseStudyUrl = new URL('/work/recon', siteConfig.siteUrl).toString();
+const caseStudySchema = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Home',
+				item: siteConfig.siteUrl,
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Work',
+				item: new URL('/work', siteConfig.siteUrl).toString(),
+			},
+			{
+				'@type': 'ListItem',
+				position: 3,
+				name: 'Recon Case Study',
+				item: caseStudyUrl,
+			},
+		],
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'CreativeWork',
+		name: 'Recon Case Study',
+		headline: 'Recon marketing platform design system and dashboard redesign',
+		description:
+			'A design system and dashboard redesign for Recon, focused on visual consistency, clearer navigation, and AI-ready product implementation.',
+		url: caseStudyUrl,
+		author: {
+			'@type': 'Person',
+			name: siteConfig.authorName,
+		},
+		isPartOf: {
+			'@type': 'WebSite',
+			name: siteConfig.name,
+			url: siteConfig.siteUrl,
+		},
+		inLanguage: siteConfig.locale,
+	},
+];
+---
+
+<Layout
+	title="Recon Case Study | AI-Ready Design System"
+	description="Recon case study showing how a design system and dashboard redesign improved product consistency, navigation, and AI-assisted implementation."
+	ogType="article"
+	ogImageAlt="Preview of the Recon AI-ready design system case study"
+	schema={caseStudySchema}
+>
+	<a class="skip-link" href="#main-content">Skip to content</a>
+
+	<div class="case-page">
+		<SiteHeader />
+
+		<main id="main-content">
+			<section class="case-hero">
+				<p class="eyebrow">
+					<a class="breadcrumb-link" href="/work">Case Study</a>
+					<span class="breadcrumb-separator" aria-hidden="true">/</span>
+					<span>Recon</span>
+				</p>
+				<h1 class="display-title">From AI-Generated to AI-Ready Design System</h1>
+				<div class="hero-subgrid">
+					<p class="hero-text">
+						Recon is a all-around marketing tool that helps businesses manage their marketing campaigns, track their performance, and optimize their marketing strategies.
+						 The orginial design was fully AI-generated. This resulted in poor visual consistency.
+					</p>
+				</div>
+			</section>
+
+			<section class="meta-strip" id="overview">
+				{highlights.map((item) => (
+					<div class="meta-item">
+						<p class="meta-label">{item.label}</p>
+						<p class="meta-value">{item.value}</p>
+					</div>
+				))}
+			</section>
+
+			<section class="lead-image-section">
+				<Image
+					class="lead-image"
+					src={designSystemImage}
+					alt="Design System Hero preview"
+					sizes="(max-width: 78rem) 100vw, 78rem"
+				/>
+			</section>
+
+			<section class="summary-section">
+				<p class="section-kicker">Overview</p>
+				<h2>AI-ready design system for visual consistency.</h2>
+				<div class="summary-main">
+					<p>
+						The orginial design was fully AI-generated. This resulted in poor visual consistency, no clear navigation, random spacing and layouts,
+						no uniformed colors, buttons, headlines, paragraphs and states. 
+					</p>
+					<p>
+						My role was to to create a design system that will force the AI not to think about the design and focus on the content.
+					</p>
+					<p class="summary-meta">
+						<strong>Focus:</strong> Dashboard clarity, hierarchy, consitency
+					</p>
+					<p class="summary-meta">
+						<strong>Scope:</strong> UX audit, UI redesign, visual refinement
+					</p>
+				</div>
+			</section>
+
+			<section class="editorial-section editorial-section-no-divider" id="process">
+				<div class="section-rail">
+					<p class="section-kicker">What I Did</p>
+				</div>
+				<div class="story-block">
+					<p>
+						I started by auditing the existing dashboard. What stood out right away is the AI-generated feeling of it. The dashboard had multiple tools
+						that were not grouped properly in the navigation and the page structure was not created so it makes sense for the user. Pages were leading to other pages
+						with no clear refrence to where you are currently in the product.
+					</p>
+					<p>
+						The second thing I noticed is the lack of visual consistency. The dashboard had multiple colors, buttons, headlines, paragraphs
+						 and states that were not uniformed. This made the dashboard feel unprofessional and hard to use.
+					</p>
+					<p>
+						So the redesign focused focused on creating a clear navigation sturcure of the product and grouping the tools together in a way that makes sense for the user.
+						After that the focus was on the design system, so it can be implemented in the product and the AI can focus on the content and not the design. We set-up a system
+						where the AI tools would generates screens in Figma with implemented design tokens and componenets, so we can change double check or change anything that is needed
+						before handing it off to the development team.
+					</p>
+				</div>
+			</section>
+
+			<section class="supporting-image-section">
+				<Image
+					class="supporting-image"
+					src={reconSecondThumbnailImage}
+					alt="Recon design system and dashboard preview"
+					loading="lazy"
+					decoding="async"
+					widths={[720, 1080, 1440]}
+					sizes="(max-width: 78rem) 100vw, 78rem"
+				/>
+			</section>
+
+			<section class="editorial-section">
+				<div class="section-rail">
+					<p class="section-kicker">Design Decisions</p>
+				</div>
+				<div class="story-block">
+					<p>
+						Complex marketing tools become visually heavy fast. Since there are a lot of graphs, expandables, drop-downs, lists
+						and other information heavy components, the design needed to focus on packaging the information in a way that is easy to scan and understand.
+					</p>
+					<p>
+						The main desicison here was to firstly group the information as efficiently as possible and create a clear hiearchy. The second 
+						desicion was to create a design system that will easily guide the user trough the interface trough the use of colors, typography, spacing and other visual elements. 
+						</p>
+					<p>
+						Lastly I worked on dark mode, since the original version was hard to read and the colors were the shades of the original branding.
+					</p>
+				</div>
+			</section>
+
+			<section class="editorial-section" id="outcome">
+				<div class="section-rail">
+					<p class="section-kicker">Outcome</p>
+				</div>
+				<div class="story-block">
+					<ul class="outcome-list">
+						{outcomes.map((item) => <li>{item}</li>)}
+					</ul>
+				</div>
+			</section>
+
+			<section class="supporting-image-section">
+				<div class="image-grid-eight">
+					<div class="image-with-label">
+						<Image
+							class="supporting-image"
+							src={oldGoogleAdsDarkImage}
+							alt="Old Google Ads page dark"
+							loading="lazy"
+							decoding="async"
+							widths={[720, 1080, 1440]}
+							sizes="(max-width: 78rem) 50vw, 39rem"
+						/>
+						<p class="image-label">Old Google Ads page dark</p>
+					</div>
+					<div class="image-with-label">
+						<Image
+							class="supporting-image"
+							src={newGoogleAdsDarkImage}
+							alt="New Google Ads page dark"
+							loading="lazy"
+							decoding="async"
+							widths={[720, 1080, 1440]}
+							sizes="(max-width: 78rem) 50vw, 39rem"
+						/>
+						<p class="image-label">New Google Ads page dark</p>
+					</div>
+					<div class="image-with-label">
+						<Image class="supporting-image" src={oldGoogleAdsLightImage} alt="Old Google Ads page light" loading="lazy" decoding="async" widths={[720, 1080, 1440]} sizes="(max-width: 78rem) 50vw, 39rem" />
+						<p class="image-label">Old Google Ads page light</p>
+					</div>
+					<div class="image-with-label">
+						<Image class="supporting-image" src={newGoogleAdsLightImage} alt="New Google Ads page light" loading="lazy" decoding="async" widths={[720, 1080, 1440]} sizes="(max-width: 78rem) 50vw, 39rem" />
+						<p class="image-label">New Google Ads page light</p>
+					</div>
+					<div class="image-with-label">
+						<Image class="supporting-image" src={oldAnalyticsImage} alt="Old Analytics page" loading="lazy" decoding="async" widths={[720, 1080, 1440]} sizes="(max-width: 78rem) 50vw, 39rem" />
+						<p class="image-label">Old Analytics page</p>
+					</div>
+					<div class="image-with-label">
+						<Image class="supporting-image" src={newAnalyticsImage} alt="New Analytics page" loading="lazy" decoding="async" widths={[720, 1080, 1440]} sizes="(max-width: 78rem) 50vw, 39rem" />
+						<p class="image-label">New Analytics page</p>
+					</div>
+					<div class="image-with-label">
+						<Image class="supporting-image" src={oldPagesImage} alt="Old Page Explorer dashboard" loading="lazy" decoding="async" widths={[720, 1080, 1440]} sizes="(max-width: 78rem) 50vw, 39rem" />
+						<p class="image-label">Old Page Explorer dashboard</p>
+					</div>
+					<div class="image-with-label">
+						<Image class="supporting-image" src={newPagesImage} alt="New Page Explorer dashboard" loading="lazy" decoding="async" widths={[720, 1080, 1440]} sizes="(max-width: 78rem) 50vw, 39rem" />
+						<p class="image-label">New Page Explorer dashboard</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="editorial-section future-steps-section">
+				<div class="section-rail">
+					<p class="section-kicker">Future Steps</p>
+				</div>
+				<div class="story-block">
+					<ul class="outcome-list">
+						{futureSteps.map((item) => <li>{item}</li>)}
+					</ul>
+				</div>
+			</section>
+		</main>
+	</div>
+</Layout>
+
+<style>
+	.case-page {
+		position: relative;
+		width: min(calc(100% - 3rem), 78rem);
+		margin: 0 auto;
+		padding: 1.25rem 0 5rem;
+	}
+
+	.eyebrow,
+	.meta-label,
+	.section-kicker {
+		font-family: var(--font-mono);
+		font-size: 0.82rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		line-height: 1.4;
+		text-transform: uppercase;
+	}
+
+	.eyebrow a {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.1rem 0;
+		color: var(--foreground);
+		text-decoration: none;
+		transition: opacity 120ms ease;
+	}
+
+	.eyebrow a:hover,
+	.eyebrow a:focus-visible {
+		opacity: 0.68;
+	}
+
+	.case-hero {
+		padding: 6rem 0 4rem;
+	}
+
+	.eyebrow,
+	.meta-label,
+	.section-kicker {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 0.55rem;
+		margin-bottom: 1.1rem;
+		color: var(--muted-foreground);
+		font-style: normal;
+	}
+
+	.breadcrumb-link {
+		font-weight: 600;
+	}
+
+	.breadcrumb-separator {
+		color: var(--muted-foreground);
+	}
+
+	h1,
+	h2 {
+		margin: 0;
+		font-weight: 800;
+		letter-spacing: -0.05em;
+		color: var(--foreground);
+	}
+
+	.hero-subgrid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+		gap: 2rem;
+		margin-top: 1.75rem;
+	}
+
+	.hero-text,
+	.hero-note,
+	.summary-main p,
+	.summary-meta,
+	.story-block p,
+	.outcome-list li {
+		font-size: 1.08rem;
+		line-height: 1.7;
+	}
+
+	.hero-text,
+	.hero-note,
+	.summary-main p,
+	.summary-meta,
+	.story-block p {
+		margin: 0;
+	}
+
+	.hero-note {
+		color: var(--muted-foreground);
+	}
+
+	.meta-strip {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 2rem;
+		padding: 1.5rem 0 0.5rem;
+		border-top: 1px solid var(--border);
+	}
+
+	.meta-item {
+		padding-top: 0.75rem;
+	}
+
+	.meta-value {
+		margin: 0.35rem 0 0;
+		font-size: 1.15rem;
+		font-weight: 700;
+	}
+
+	.lead-image-section {
+		padding: 2rem 0 4rem;
+	}
+
+	.dual-image-section {
+		padding: 2rem 0 4rem;
+	}
+
+	.dual-image-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+	}
+
+	.image-grid-two {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.5rem;
+	}
+
+	.image-grid-eight {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.5rem;
+	}
+
+	@media (max-width: 768px) {
+		.dual-image-container,
+		.image-grid-eight {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.image-with-label {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.image-label {
+		margin: 0;
+		font-size: 1rem;
+		font-weight: 600;
+		color: var(--foreground);
+		text-align: center;
+	}
+
+	.lead-image {
+		width: 100%;
+		border: 1px solid var(--border);
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-large);
+	}
+
+	.supporting-image-section {
+		padding: 2rem 0 4rem;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.supporting-image {
+		width: 100%;
+		border: 1px solid var(--border);
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-large);
+	}
+
+	.summary-section {
+		padding: 0 0 3rem;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.summary-section h2 {
+		margin-top: 0.75rem;
+		font-size: clamp(2rem, 3vw, 3rem);
+		line-height: 1.04;
+	}
+
+	.summary-main {
+		display: grid;
+		gap: 1rem;
+		margin-top: 1.5rem;
+	}
+
+	.summary-side p {
+		color: var(--muted-foreground);
+	}
+
+	.summary-side strong {
+		color: var(--foreground);
+	}
+
+	.summary-meta {
+		color: var(--muted-foreground);
+	}
+
+	.summary-meta strong {
+		color: var(--foreground);
+	}
+
+	.editorial-section {
+		display: grid;
+		grid-template-columns: 16rem minmax(0, 1fr);
+		gap: 2rem;
+		padding: 2.5rem 0;
+		border-bottom: 1px solid var(--border);
+	}
+
+	#outcome {
+		border-bottom: 0;
+	}
+
+	.future-steps-section {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.editorial-section-no-divider {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.section-rail {
+		align-self: start;
+	}
+
+	.story-block {
+		display: grid;
+		gap: 1rem;
+		max-width: 52rem;
+		margin-top: 0;
+	}
+
+	.outcome-list {
+		margin: 0;
+		padding-left: 1.25rem;
+		list-style: disc;
+	}
+
+	.outcome-list li::marker {
+		color: var(--foreground);
+	}
+
+
+	@media (max-width: 980px) {
+		.hero-subgrid,
+		.meta-strip {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 720px) {
+		.case-page {
+			width: min(calc(100% - 1.5rem), 78rem);
+			padding-top: 1rem;
+		}
+
+		.editorial-section,
+		.image-grid-two,
+		.dual-image-container {
+			grid-template-columns: 1fr;
+		}
+
+		.case-hero {
+			padding: 4rem 0 3rem;
+		}
+
+		.hero-text,
+		.hero-note,
+		.summary-main p,
+		.summary-meta,
+		.story-block p,
+		.outcome-list li {
+			font-size: 1.05rem;
+		}
+	}
+</style>

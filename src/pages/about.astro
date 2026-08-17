@@ -1,0 +1,216 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import portraitImage from '../assets/images/luka-portrait.jpg';
+---
+
+<Layout
+	title="About Luka | Web Designer"
+	description="Learn more about Luka Nikolic, a web designer with experience across e-commerce, landing pages, websites, and design systems."
+>
+	<a class="skip-link" href="#main-content">Skip to content</a>
+
+	<div class="page">
+		<SiteHeader />
+
+		<main id="main-content">
+			<section class="hero">
+				<p class="eyebrow">About</p>
+				<div class="hero-layout">
+					<div class="hero-copy">
+						<h1 class="display-title">I am an all-around tech nerd that ended up designing apps and websites.</h1>
+						<p class="hero-text">
+							As a millennial, I’ve witnessed the rapid advance of technology, so I tend to combine old-school thinking about user value and functionality with new and up-to-date technologies.
+						</p>
+					</div>
+					<div class="hero-portrait-wrap">
+						<Image
+							class="hero-portrait"
+							src={portraitImage}
+							alt="Portrait of Luka Nikolic"
+							loading="eager"
+							decoding="async"
+							widths={[320, 480, 640]}
+							sizes="(max-width: 980px) 100vw, 32vw"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<section class="editorial-section">
+				<div class="section-rail">
+					<p class="section-kicker">Background</p>
+				</div>
+				<div class="story-block">
+					<p>
+						Over the past 7+ years, I have worked across print and graphic design, e-commerce websites, landing pages, and design systems for applications. My multimedia background and diploma have given me opportunities to work across multiple fields of design and even step into front-end development.
+					</p>
+					<p>
+						I started out doing print preparation in Corel about 14 years ago. My first design experience was in my family’s print shop. From there, I moved to a marketing agency where I started creating banners and social media posts. As the agency grew, we began creating landing pages and tracking performance through Google Analytics and Hotjar. Over time, the agency began working exclusively with e-commerce brands, and we started designing websites primarily with WordPress and Shopify. We are currently developing an app that will serve as an all-in-one marketing hub, giving users an overview of their Google Ads, GA4, and other accounts.
+					</p>
+				</div>
+			</section>
+
+			<section class="editorial-section">
+				<div class="section-rail">
+					<p class="section-kicker">How I Work</p>
+				</div>
+				<div class="story-block">
+					<p>
+						Working in marketing agencies taught me to manage multiple projects and tools. From making websites to creating Google Ads creatives, I became comfortable presenting my work and communicating with multiple clients. I believe this comes from learning proper preparation, presentation, and communication in client-facing work.
+					</p>
+					<p>
+						Because the agencies were relatively small, I often handled clients independently. This required creating and maintaining design systems and categorizing projects to reduce turnaround time. I am grateful for those experiences because they made me much faster in my work.
+					</p>
+				</div>
+			</section>
+
+			<section class="editorial-section">
+				<div class="section-rail">
+					<p class="section-kicker">Hobbies</p>
+				</div>
+				<div class="story-block">
+					<p>
+						Due to my multimedia background, my hobbies include various forms of art. I love watching movies, taking digital and analog photos, collecting vinyl, reading books, and playing video games when I have the time.
+					</p>
+					<p>
+						Also my big passion is sports, I am consistently working out for the past 20 years and I love playing basketball!
+					</p>
+				</div>
+			</section>
+		</main>
+	</div>
+</Layout>
+
+<style>
+	.page {
+		position: relative;
+		width: min(calc(100% - 3rem), 78rem);
+		margin: 0 auto;
+		padding: 1.25rem 0 5rem;
+	}
+
+	.eyebrow,
+	.section-kicker {
+		font-family: var(--font-mono);
+		font-size: 0.82rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		line-height: 1.4;
+		text-transform: uppercase;
+	}
+
+	.hero {
+		padding: 6rem 0 4rem;
+	}
+
+	.hero-layout {
+		display: grid;
+		grid-template-columns: minmax(0, 1.35fr) minmax(15rem, 20rem);
+		gap: 2.5rem;
+		align-items: start;
+		margin-top: 1rem;
+	}
+
+	.hero-copy {
+		max-width: 52rem;
+	}
+
+	.eyebrow,
+	.section-kicker {
+		margin: 0;
+		color: var(--muted-foreground);
+		font-style: normal;
+	}
+
+	.hero-text,
+	.story-block p {
+		font-size: 1.08rem;
+		line-height: 1.7;
+		margin: 0;
+	}
+
+	.hero-text {
+		max-width: 44rem;
+		margin-top: 1.5rem;
+	}
+
+	.hero-portrait-wrap {
+		display: flex;
+		justify-content: flex-end;
+		align-self: start;
+		padding-top: 0.35rem;
+	}
+
+	.hero-portrait {
+		width: min(100%, 20rem);
+		height: auto;
+		display: block;
+		border-radius: 1.5rem;
+		box-shadow: 0 18px 40px rgba(23, 23, 23, 0.08);
+	}
+
+	.editorial-section {
+		display: grid;
+		grid-template-columns: 16rem minmax(0, 1fr);
+		gap: 2rem;
+		padding: 2.5rem 0;
+		border-top: 1px solid var(--border);
+	}
+
+	.section-rail {
+		align-self: start;
+	}
+
+	.story-block {
+		display: grid;
+		gap: 1rem;
+		max-width: 52rem;
+	}
+
+	@media (max-width: 1100px) {
+		.hero-layout {
+			grid-template-columns: 1fr;
+			gap: 1.75rem;
+			align-items: start;
+		}
+
+		.hero-copy {
+			max-width: 100%;
+		}
+
+		.hero-text {
+			max-width: 42rem;
+		}
+
+		.hero-portrait-wrap {
+			justify-content: flex-start;
+			padding-top: 0;
+		}
+	}
+
+	@media (max-width: 720px) {
+		.page {
+			width: min(calc(100% - 1.5rem), 78rem);
+			padding-top: 1rem;
+		}
+
+		.hero {
+			padding: 4rem 0 3rem;
+		}
+
+		.editorial-section {
+			grid-template-columns: 1fr;
+		}
+
+		.hero-text,
+		.story-block p {
+			font-size: 1.05rem;
+		}
+
+		.hero-portrait {
+			width: min(100%, 16rem);
+		}
+	}
+</style>
