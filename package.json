@@ -1,11 +1,11 @@
 {
   "name": "luka-nikolic-portfolio",
-  "description": "Luka Nikolic Design web designer portfolio.",
+  "description": "Luka Nikolic Design Product / UX Designer portfolio.",
   "type": "module",
   "version": "2.0.0",
   "author": "Luka Nikolic",
   "license": "MIT",
-  "keywords": ["portfolio", "web designer", "ux", "designer", "astro"],
+  "keywords": ["portfolio", "product designer", "ux designer", "designer", "astro"],
   "engines": {
     "node": ">=22.12.0"
   },

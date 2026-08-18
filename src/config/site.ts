@@ -25,17 +25,17 @@ const normalizedSiteUrl = (envSiteUrl || defaultSiteUrl).replace(/\/+$/, '');
 
 export const siteConfig: SiteConfig = {
 	name: 'Luka Nikolic Design',
-	title: 'Luka Nikolic Design | Web Designer Portfolio',
+	title: 'Luka Nikolic Design | Product / UX Designer Portfolio',
 	description:
-		'Luka Nikolic is a web designer creating clear, conversion-focused websites, e-commerce experiences, dashboards, and design systems.',
+		'Luka Nikolic is a Product / UX Designer creating clear, conversion-focused websites, e-commerce experiences, dashboards, and design systems.',
 	// Set SITE_URL or PUBLIC_SITE_URL to keep canonicals, robots.txt, and the sitemap aligned in each environment.
 	siteUrl: normalizedSiteUrl,
 	email: 'lukanikolicdesign@gmail.com',
 	locale: 'en-US',
 	authorName: 'Luka Nikolic Design',
-	authorRole: 'UX Designer',
+	authorRole: 'Product / UX Designer',
 	keywords: [
-		'web designer portfolio',
+		'product designer portfolio',
 		'UX designer portfolio',
 		'e-commerce web design',
 		'design systems',

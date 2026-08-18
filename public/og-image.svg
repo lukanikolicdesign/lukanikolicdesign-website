@@ -4,8 +4,8 @@
   <rect x="96" y="96" width="164" height="164" rx="24" fill="#171717"/>
   <text x="178" y="208" text-anchor="middle" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="76" font-weight="800">M</text>
   <text x="302" y="188" fill="#171717" font-family="Manrope, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="-0.03em">Luka Nikolic Design</text>
-  <text x="96" y="352" fill="#171717" font-family="Manrope, Arial, sans-serif" font-size="72" font-weight="800" letter-spacing="-0.05em">
-    <tspan x="96" dy="0">Web Designer Portfolio</tspan>
-    <tspan x="96" dy="82">websites, products, and systems.</tspan>
+  <text x="96" y="352" fill="#171717" font-family="Manrope, Arial, sans-serif" font-size="56" font-weight="800" letter-spacing="-0.05em">
+    <tspan x="96" dy="0">Product / UX Designer Portfolio</tspan>
+    <tspan x="96" dy="70">websites, products, and systems.</tspan>
   </text>
 </svg>
