@@ -1,7 +1,5 @@
-import { siteConfig } from '../config/site';
-
 export function GET() {
-	const body = `User-agent: *\nAllow: /\n\nSitemap: ${siteConfig.siteUrl}/sitemap-index.xml\n`;
+	const body = `User-agent: *\nDisallow: /\n`;
 
 	return new Response(body, {
 		headers: {
