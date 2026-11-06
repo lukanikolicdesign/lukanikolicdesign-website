@@ -56,6 +56,30 @@ const schemaData =
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="color-scheme" content="light dark" />
+		<script is:inline>
+			// Google Tag Manager loads only after analytics consent (see public/cookie-consent.js).
+			(() => {
+				let loaded = false;
+				const loadGtm = () => {
+					if (loaded) return;
+					loaded = true;
+					const s = document.createElement('script');
+					s.async = true;
+					s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KJTCBC6W';
+					document.head.appendChild(s);
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+				};
+				try {
+					const consent = JSON.parse(localStorage.getItem('luka-cookie-consent') || 'null');
+					if (consent && consent.version === '1' && consent.analytics) loadGtm();
+				} catch {}
+				window.addEventListener('luka:cookieConsentChanged', (event) => {
+					if (event.detail && event.detail.analytics) loadGtm();
+				});
+			})();
+		</script>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
